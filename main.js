@@ -4,13 +4,13 @@ var Client = require("irc").Client;
 var IssuesBot = require("./issuesbot").IssuesBot;
 var QuipsBot = require("./quipsbot").QuipsBot;
 
-var channel = "#nightingale";
+var channels = ["#nightingale", "#mozilla.ch"];
 
 // IRC config
 var client = new Client("irc.mozilla.org",
                 "ngissuesbot",
                 {
-                    "channels": [ channel ],
+                    "channels": channels,
                     "floodProtection": true
                 }
             );
